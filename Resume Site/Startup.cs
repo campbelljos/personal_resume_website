@@ -34,7 +34,7 @@ namespace Resume_Site
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Pages/Error");
             }
 
             app.UseStaticFiles();
@@ -43,7 +43,7 @@ namespace Resume_Site
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Home}/{id?}");
+                    template: "{controller=Pages}/{action=Resume}/{id?}");
             });
         }
     }

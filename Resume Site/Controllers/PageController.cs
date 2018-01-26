@@ -8,9 +8,9 @@ using Resume_Site.Models;
 
 namespace Resume_Site.Controllers
 {
-    public class HomeController : Controller
+    public class PagesController : Controller
     {
-        public IActionResult Home()
+        public IActionResult Resume()
         {
             return View();
         }
