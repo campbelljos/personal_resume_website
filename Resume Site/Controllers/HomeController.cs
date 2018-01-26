@@ -17,7 +17,10 @@ namespace Resume_Site.Controllers
 
         public IActionResult Contact()
         {
+            ViewData["EMail"] = "joe.andrew.campbell@gmail.com";
+            ViewData["Phone"] = "608-558-8711";
             return View();
+
         }
 
         public IActionResult Error()

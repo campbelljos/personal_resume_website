@@ -1,17 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Contact";
-}
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
-
-<div class="container">
+﻿<div class="container">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="col-lg-6 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="page-heading">
-                <hr class="small">
+                <h2><strong>Contact Info</strong></h2>
                 <span class="subheading">
-                    <strong>Email:</strong> <a href="mailto:joe.andrew.campbell@gmail.com"> joe.andrew.campbell@gmail.com</a><br />
-                    <strong>Phone Number: </strong> 608-558-8711<br />
+                    <strong>Email:</strong> <a href="mailto:@ViewData["EMail"]"> @ViewData["EMail"]</a><br />
+                    <strong>Phone Number: </strong> @ViewData["Phone"]<br />
                 </span>
             </div>
         </div>
