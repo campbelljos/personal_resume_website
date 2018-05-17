@@ -11,12 +11,29 @@ sudo apt-get install -y dotnet-sdk-2.1.200
 
 #Setup appache
 apt-get install -y apache2
+
 a2enmod proxy
+a2enmod proxy_http
+a2enmod proxy_ajp
+a2enmod rewrite
+a2enmod deflate
+a2enmod headers
+a2enmod proxy_balancer
+a2enmod lbmethod_byrequests
+a2enmod proxy_connect
+a2enmod proxy_html
+a2enmod xml2enc
+
+a2dissite default
 ufw allow in "Apache Full"
 
-service apache2 restart
+#Launch the site
 cd "/var/www/resume-site/Resume Site"
+ln -s "/var/www/resume-site/Resume Site" /etc/apache2/sites-available
+#cp resume-site.conf /etc/apache2/sites-available/resume-site.conf
+
 a2ensite resume-site.conf
+service apache2 restart
 
 dotnet build
 dotnet run
