@@ -24,12 +24,12 @@ a2enmod proxy_connect
 a2enmod proxy_html
 a2enmod xml2enc
 
-a2dissite default
+a2dissite 000-default.conf
 ufw allow in "Apache Full"
 
 #Launch the site
 cd "/var/www/resume-site/Resume Site"
-ln -s "/var/www/resume-site/Resume Site" /etc/apache2/sites-available
+ln -s "/var/www/resume-site/Resume Site/resume-site.conf" /etc/apache2/sites-available/resume-site.conf
 #cp resume-site.conf /etc/apache2/sites-available/resume-site.conf
 
 a2ensite resume-site.conf
