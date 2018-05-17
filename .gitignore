@@ -3,5 +3,10 @@
 */obj/*
 */bin/*
 */doxygen/output/*
+<<<<<<< HEAD
 /Reference_Material/
 /scripts/
+=======
+Reference_Material/
+scripts/
+>>>>>>> Deployment
