@@ -26,11 +26,9 @@ a2enmod xml2enc
 
 a2dissite 000-default.conf
 ufw allow in "Apache Full"
-
-#Launch the site
-cd "/var/www/resume-site/Resume Site"
 ln -s "/var/www/resume-site/Resume Site/resume-site.conf" /etc/apache2/sites-available/resume-site.conf
 
+#Launch the site
 a2ensite resume-site.conf
 service apache2 restart
 
